@@ -1,4 +1,4 @@
-input: (.Q.def[`height`width`timer ! (30; 40; 100)] .Q.opt .z.x);
+input: .Q.def[`height`width`timer ! (30; 40; 100)] .Q.opt .z.x;
 
 height: input `height;
 width: input `width;
