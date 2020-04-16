@@ -17,8 +17,7 @@ neighbours: grid +/:\: (1 0 -1 cross 1 0 -1) except enlist 0 0;
 
 game: {[state]
   alive: sum each state ./:/: neighbours;
-  new: ((alive = 3) and not raze state) or (alive in 2 3) and raze state;
-  dim # new
+  dim # ((alive = 3) and not raze state) or (alive in 2 3) and raze state
   }
 
 .z.ts: {
