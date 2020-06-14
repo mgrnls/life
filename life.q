@@ -1,4 +1,4 @@
-input: .Q.def[`height`width`timer ! (30; 40; 100)] .Q.opt .z.x;
+input: (.Q.def `height`width`timer ! 30 40 100) .Q.opt .z.x;
 
 height: input `height;
 width: input `width;
@@ -23,7 +23,7 @@ game: {[state]
 .z.ts: {
   new: game init;
   if[all (raze new) = raze init; -1 "Finished :)"; exit 0];
-  init :: new;
+  `init set new;
   -1 "\033[2J\033[H" , "\n" sv " o" init;
   }
 
